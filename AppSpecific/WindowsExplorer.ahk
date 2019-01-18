@@ -66,16 +66,6 @@
 	Tab::Send {Tab}{Down}{Enter}
 #IfWinActive
 
-#If MouseIsOver("ahk_class Shell_TrayWnd")
-	MButton::
-		If (A_PriorHotKey = A_ThisHotKey and A_TimeSincePriorHotkey < 500)
-		{
-			Run taskmgr.exe
-			WinWait, Task Manager
-			WinActivate, Task Manager
-		}
-#If
-
 #IfWinActive, ahk_class #32770 Run
 	Tab::Down
 #IfWinActive

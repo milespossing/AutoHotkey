@@ -12,9 +12,11 @@ CapsLock & F12:: 		Show_Dir(UserDir "\Documents")
 
 #c::			Show_Dir("C:\")
 #p::			Show_Dir("C:\Program Files (x86)\")
+#!p::			Show_Dir("C:\Program Files\")
+#m::			Show_Dir(UserDir)
 
 ; !#NumpadDot::		Show_Dir("")
-; !#Numpad1::		Show_Dir("")
+!#Numpad1::		Show_Dir("C:\Milliman")
 ; !#NumPad2::		Show_Dir("")
 ; !#NumPad3::		Show_Dir("")
 ; !#Numpad4::		Show_Dir("")
