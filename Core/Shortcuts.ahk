@@ -34,8 +34,6 @@ CapsLock & F12:: 		Show_Dir(UserDir "\Documents")
 ;;;;;; Misc Shortcuts ;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-AppsKey::RWin ; GMMK Keyboard
-
 #WheelDown::	Send {WheelRight 2}
 #WheelUp::		Send {WheelLeft 2}
 
@@ -85,7 +83,7 @@ RCtrl & Insert::Show_Start("- Outlook", "C:\Program Files (x86)\Microsoft Office
 RCtrl & 2::
 RCtrl & End::
 CapsLock & d::
-CapsLock & SC027::Show_Start("Cmder", "C:\tools\cmdermini\Cmder.exe")
+CapsLock & SC027::Show_Start("Everything", "C:\Program Files (x86)\Everything\Everything.exe")
 
 RCtrl & 3::
 RCtrl & PgDn::
