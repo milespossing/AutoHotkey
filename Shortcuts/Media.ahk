@@ -14,8 +14,6 @@ CapsLock & PgDn::					SendInput, {Volume_Down}
 CapsLock & Down::					SendInput, {Volume_Down}
 
 RCtrl & Enter::
-PrintScreen::							Gosub, Spotify
-CapsLock & PrintScreen::	SendInput, {Volume_Mute}
 
 Spotify:
 	If WinActive("ahk_class SpotifyMainWindow")

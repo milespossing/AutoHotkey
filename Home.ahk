@@ -13,14 +13,13 @@ CheckAdmin()
 
 RunIfExist(A_ScriptDir "\Utilities\VolumeScroll\VolumeScroll.ahk")
 RunIfExist(A_ScriptDir "\Core\AutoCorrect.ahk")
-Run, %A_ScriptDir%\Utilities\WindowPadX\WindowPadX.ahk %A_ScriptDir%\WindowPadX.Custom.ini
 
 IfWinNotExist, ahk_exe clipx.exe
 	RunProgFiles("ClipX\clipx.exe")
 
 Notify(A_ScriptName . " Started!","",-3,"Style=Win10")
 
-Editor := "C:\Program Files (x86)\Microsoft VS Code\Code.exe"
+Editor := "C:\Users\miles.possing\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 UserDir := "C:\Users\" A_UserName
 
 Menu, Tray, Icon, lib\images\Portal.ico
@@ -33,21 +32,6 @@ TaskBar_SetAttr(2)
 CreateStartupShortcut()
 Return ; End Auto-Execute
 
-IntroSound:
-	SoundPlay, lib\sounds\load.wav
-	Return
-
-IntroLights:
-	kbdIndex := 1
-	Loop, 4 ; flash all LEDs
-	 {
-	 KeyboardLED(4,"on", kbdIndex)
-	 Sleep, 75
-	 KeyboardLED(4,"off", kbdIndex)
-	 Sleep, 75
-	 }
-	KeyboardLED(0,"off", kbdIndex)
-	Return
 
 ^!s::
 	RunProgFiles("Everything\Everything.exe")
@@ -146,5 +130,4 @@ RCtrl & PgUp::Show_Start(" - Discord", UserDir "\AppData\Local\Discord\app-0.0.2
 #Include %A_ScriptDir%\Shortcuts\CapsNav.ahk
 #Include lib\VA.ahk
 #Include lib\Notify.ahk
-#Include lib\LedControl.ahk
 #Include lib\TaskBar_SetAttr.ahk

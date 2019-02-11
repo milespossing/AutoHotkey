@@ -21,19 +21,15 @@ SysGet, MonitorCount, MonitorCount
 SysGet, MonitorWorkArea, MonitorWorkArea
 EnvGet, Domain, USERDOMAIN
 UserDir := "C:\Users\" A_UserName
-Editor := "C:\Program Files\Microsoft VS Code\Code.exe"
+Editor := "C:\Users\miles.possing\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 kbdIndex := 17 ; GMMK
 
 Notify(A_ScriptName " Started!","",-3,"Style=Win10")
-
-SetTimer, IntroSound, -1
-SetTimer, IntroLights, -1
 
 CheckAdmin()
 
 RunIfExist(A_ScriptDir "\Utilities\VolumeScroll\VolumeScroll.ahk")
 RunIfExist(A_ScriptDir "\Core\AutoCorrect.ahk")
-Run, %A_ScriptDir%\Utilities\WindowPadX\WindowPadX.ahk %A_ScriptDir%\WindowPadX.Custom.ini
 
 IfWinNotExist, ahk_exe clipx.exe
 	RunProgFiles("ClipX\clipx.exe")
@@ -41,20 +37,7 @@ IfWinNotExist, ahk_exe clipx.exe
 CreateStartupShortcut()
 Return ; End Auto-Execute
 
-IntroSound:
-	SoundPlay, lib\sounds\signon.wav
-	Return
 
-IntroLights:
-	Loop, 4 ; Single controllable LED on GMMK
-	{
-		KeyboardLED(4,"switch", kbdIndex)
-		Sleep, 100
-		KeyboardLED(0,"off", kbdIndex)
-		Sleep, 100
-	}
-	KeyboardLED(0,"off", kbdIndex)
-	Return
 
 #Include %A_ScriptDir%\Core\Functions.ahk
 #Include %A_ScriptDir%\Core\Shortcuts.ahk
@@ -66,10 +49,12 @@ IntroLights:
 
 ^!r::	Reload
 ^!e::	Edit(".", Editor)
-^!t::	Edit("test.ahk", Editor)
-^!h::	Edit("Core\Hotstrings.ahk", Editor)
-^!a::	Edit("Core\AppSpecific.ahk", Editor)
-^!m::	Edit("Core\Functions.ahk", Editor)
+^!F9::	Edit("test.ahk", Editor)
+^!F10::	Edit("Core\Hotstrings.ahk", Editor)
+^!F11::	Edit("Core\AppSpecific.ahk", Editor)
+^!F12::	Edit("Core\Functions.ahk", Editor)
+^!PrintScreen:: Edit("Work.ahk",Editor)
+
 !t::	Run, Test.ahk
 
 ^NumpadEnter::Edit("Core\Shortcuts.ahk", Editor)
@@ -82,4 +67,3 @@ IntroLights:
 #Include %A_ScriptDir%\lib\TF.ahk
 #Include %A_ScriptDir%\lib\Notify.ahk
 #Include %A_ScriptDir%\lib\Explorer.ahk
-#Include %A_ScriptDir%\lib\Ledcontrol.ahk

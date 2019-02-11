@@ -50,6 +50,11 @@
 		}
 	Return
 
+	^+P::
+		dir := Explorer_GetPath()
+		Run powershell -NoExit -command "cd '%dir%'"
+		Return
+
 	^e::
 	+Enter::
 		sel := Explorer_GetSelected()
