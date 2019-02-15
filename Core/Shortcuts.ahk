@@ -1,4 +1,3 @@
-#Include %A_ScriptDir%\Shortcuts\Media.ahk
 #Include %A_ScriptDir%\Shortcuts\CapsNav.ahk
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -74,7 +73,7 @@ CapsLock & F12:: 		Show_Dir(UserDir "\Documents")
 CapsLock & /::
 RCtrl & Esc:: ; 60% keyboard
 CapsLock & s::
-RCtrl & Delete::	Show_Start("- Google Chrome", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
+RCtrl & Home::	Show_Start("- Google Chrome", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
 
 RCtrl & 1::
 CapsLock & w::
@@ -88,13 +87,13 @@ CapsLock & SC027::Show_Start("Everything", "C:\Program Files (x86)\Everything\Ev
 RCtrl & 3::
 RCtrl & PgDn::
 CapsLock & f::
-CapsLock & '::Show_Start("- Visual Studio Code", "C:\Program Files\Microsoft VS Code\Code.exe")
+CapsLock & '::Show_Start("- Visual Studio Code", "C:\Users\miles.possing\AppData\Local\Programs\Microsoft VS Code\Code.exe")
 
 CapsLock & e::
-RCtrl & Home::Show_Start("- Microsoft Visual Studio", "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")
+RCtrl & PgUp::Show_Start("- Microsoft Visual Studio", "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\devenv.exe")
 
 CapsLock & r::
-RCtrl & PgUp::Show_Start("Slack -", UserDir "\AppData\Local\slack\slack.exe")
+RCtrl & Delete::Show_Start("Slack -", UserDir "\AppData\Local\slack\slack.exe")
 
 ^!Enter::Gosub, PurgeWindows
 ^!0::Gosub, RearrangeWindows

@@ -2,10 +2,34 @@
 
 ^+CapsLock::CapsLock
 
-CapsLock & h::CapsNav("Left")
-CapsLock & j::CapsNav("Down")
-CapsLock & k::CapsNav("Up")
-CapsLock & l::CapsNav("Right")
+CapsLock & h::
+	If GetKeyState("lctrl")
+		CapsNav("Left","^")
+	Else
+		CapsNav("Left")
+Return
+
+CapsLock & j::
+	If GetKeyState("lctrl")
+		CapsNav("Down","^")
+	Else
+		CapsNav("Down")
+Return
+
+CapsLock & k::
+	If GetKeyState("lctrl")
+		CapsNav("Up","^")
+	Else
+		CapsNav("Up")
+Return
+
+CapsLock & l::
+	If GetKeyState("lctrl")
+		CapsNav("Right","^")
+	Else
+		CapsNav("Right")
+Return
+
 
 CapsLock & n::CapsNav("Home")
 CapsLock & p::CapsNav("End")

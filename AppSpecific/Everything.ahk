@@ -11,6 +11,7 @@
 	+Enter::
 		StatusBarGetText, FullFileName
 		Run %Editor% "%FullFileName%"
+		OutputDebug, Text DEBUG %FullFileName% 
 		Return
 
 	^+Enter::
@@ -38,4 +39,6 @@
 		ClipWait
 		Notify("File Dir Copied",clipboard,-1,"Style=Win10")
 		Return
+
+
 #If

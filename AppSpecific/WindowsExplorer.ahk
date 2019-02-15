@@ -1,7 +1,7 @@
 #IfWinActive ahk_class CabinetWClass
 	F6::
 		;RegWrite, REG_DWORD, HKCU, Software\Microsoft\Windows\CurrentVersion\Explorer\CabinetState, FullPath, 1
-		WinGetActiveTitle, title
+		title := Explorer_GetPath()
 		Run, C:\Program Files (x86)\Everything\Everything.exe -path "%title%"
 		WinWaitActive, Everything,, 3
 		If Errorlevel
@@ -10,8 +10,8 @@
 	Return
 
 	F7::
-		WinGetActiveTitle, title
-		Run, C:\Program Files\grepWin\grepWin.exe /searchpath:%title%
+		title := Explorer_GetPath()
+		Run, C:\Program Files\grepWin\grepWin.exe /searchpath:"%title%"
 		WinActivate, grepWin,, 3
 		If ErrorLevel
 			Return
@@ -57,8 +57,12 @@
 
 	^e::
 	+Enter::
+		sel := Explorer_GetSelected() Run %Editor% "%sel%"
+		Return
+
+	^+e::
 		sel := Explorer_GetSelected()
-		Run %Editor% "%sel%"
+		Run vim "%sel%"
 		Return
 
 	^+Enter::

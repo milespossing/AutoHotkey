@@ -9,7 +9,6 @@ SetNumlockState, AlwaysOn
 SetCapsLockState, AlwaysOff
 CoordMode, Mouse, Screen
 DetectHiddenWindows, On
-SetScrollLockState, Off
 
 Menu, Tray, Tip, Work Script
 
@@ -51,7 +50,7 @@ Return ; End Auto-Execute
 ^!e::	Edit(".", Editor)
 ^!F9::	Edit("test.ahk", Editor)
 ^!F10::	Edit("Core\Hotstrings.ahk", Editor)
-^!F11::	Edit("Core\AppSpecific.ahk", Editor)
+^!F11::	Edit("Core\Shortcuts.ahk", Editor)
 ^!F12::	Edit("Core\Functions.ahk", Editor)
 ^!PrintScreen:: Edit("Work.ahk",Editor)
 

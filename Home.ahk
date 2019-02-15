@@ -20,6 +20,7 @@ IfWinNotExist, ahk_exe clipx.exe
 Notify(A_ScriptName . " Started!","",-3,"Style=Win10")
 
 Editor := "C:\Users\miles.possing\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+Vim := "C:\Program Files (x86)\Vim\vim81\vim.exe"
 UserDir := "C:\Users\" A_UserName
 
 Menu, Tray, Icon, lib\images\Portal.ico
@@ -126,7 +127,6 @@ RCtrl & PgUp::Show_Start(" - Discord", UserDir "\AppData\Local\Discord\app-0.0.2
 #Include %A_ScriptDir%\Core\AppSpecific.ahk
 #Include %A_ScriptDir%\Core\Functions.ahk
 #Include %A_ScriptDir%\Core\HotStrings.ahk
-#Include %A_ScriptDir%\Shortcuts\Media.ahk
 #Include %A_ScriptDir%\Shortcuts\CapsNav.ahk
 #Include lib\VA.ahk
 #Include lib\Notify.ahk
