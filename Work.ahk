@@ -28,7 +28,6 @@ Notify(A_ScriptName " Started!","",-3,"Style=Win10")
 CheckAdmin()
 
 RunIfExist(A_ScriptDir "\Utilities\VolumeScroll\VolumeScroll.ahk")
-RunIfExist(A_ScriptDir "\Core\AutoCorrect.ahk")
 
 IfWinNotExist, ahk_exe clipx.exe
 	RunProgFiles("ClipX\clipx.exe")

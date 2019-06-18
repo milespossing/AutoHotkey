@@ -73,9 +73,8 @@ CapsLock & F12:: 		Show_Dir(UserDir "\Documents")
 CapsLock & /::
 RCtrl & Esc:: ; 60% keyboard
 CapsLock & s::
-RCtrl & Home::	Show_Start("- Google Chrome", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
+RCtrl & Home::	Show_Start("Mozilla Firefox", "C:\Program Files\Mozilla Firefox\firefox.exe")
 
-RCtrl & 1::
 CapsLock & w::
 RCtrl & Insert::Show_Start("- Outlook", "C:\Program Files (x86)\Microsoft Office\root\Office16\OUTLOOK.EXE")
 
@@ -210,17 +209,17 @@ Return
 Return
 
 ; Fast minimize
-!`::
-	aDown := A_TickCount
-	Keywait ``
-	If ((A_TickCount-aDown) < 200)
-	{
-		WinGet, last_id, ID, A
-		WinMinimize, A
-	}
-	else
-		WinActivate, ahk_id %last_id%
-	Return
+; !`::
+; 	aDown := A_TickCount
+; 	Keywait ``
+; 	If ((A_TickCount-aDown) < 200)
+; 	{
+; 		WinGet, last_id, ID, A
+; 		WinMinimize, A
+; 	}
+; 	else
+; 		WinActivate, ahk_id %last_id%
+; 	Return
 
 ^!+End::
 	WinGet, pid, PID, A

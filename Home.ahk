@@ -11,8 +11,6 @@ SetCapsLockState, AlwaysOff
 
 CheckAdmin()
 
-RunIfExist(A_ScriptDir "\Utilities\VolumeScroll\VolumeScroll.ahk")
-RunIfExist(A_ScriptDir "\Core\AutoCorrect.ahk")
 
 IfWinNotExist, ahk_exe clipx.exe
 	RunProgFiles("ClipX\clipx.exe")

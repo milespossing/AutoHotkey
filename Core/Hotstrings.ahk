@@ -19,6 +19,8 @@
 	Send % now
 	Return
 
+:*:lmk..::let me know
+
 :*:comspec;::RunWait, `%comspec`% /c "",, Hide{Ctrl Down}{Left 2}{Ctrl Up}{Right}
 
 #If
@@ -31,6 +33,8 @@
 :*:-la;::(?{!}){Left}
 :*:+lb;::(?<=){Left}
 :*:-lb;::(?<{!}){Left}
+
+
 
 :*:header;::
 	linelen := strlen(clipboard) + 20

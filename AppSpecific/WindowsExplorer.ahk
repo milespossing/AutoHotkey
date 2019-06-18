@@ -57,7 +57,8 @@
 
 	^e::
 	+Enter::
-		sel := Explorer_GetSelected() Run %Editor% "%sel%"
+		sel := Explorer_GetSelected() 
+		Run %Editor% "%sel%"
 		Return
 
 	^+e::
